@@ -4,6 +4,7 @@
   "projects": {
     "shared-components": "libs/shared-components",
     "web-admin": "apps/web-admin",
+    "web-admin-api": "apps/web-admin-api",
     "web-admin-e2e": "apps/web-admin-e2e",
     "web-admin-pages": "libs/web-admin-pages"
   }

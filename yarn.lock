@@ -1902,6 +1902,15 @@
     confusing-browser-globals "^1.0.9"
     semver "7.3.4"
 
+"@nrwl/express@^14.5.1":
+  version "14.5.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-14.5.1.tgz#182ebf06eb6b55214720f4733a60cbb79ce8203f"
+  integrity sha512-rzXhgXqtdECWtdtlg+++z2tjfZysMDNK6eFeDwZat+wuQUWFZYRMUaTZa1EDrCxgcs77vXDRp1vvbCGQNpdr+A==
+  dependencies:
+    "@nrwl/devkit" "14.5.1"
+    "@nrwl/node" "14.5.1"
+    "@nrwl/workspace" "14.5.1"
+
 "@nrwl/jest@14.5.1":
   version "14.5.1"
   resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-14.5.1.tgz#8ac608ee2937463964460b40c98990e936f461af"
@@ -1974,6 +1983,37 @@
     tsconfig-paths "^3.9.0"
     url-loader "^4.1.1"
     webpack-merge "^5.8.0"
+
+"@nrwl/node@14.5.1":
+  version "14.5.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-14.5.1.tgz#59ee5dd466468c737ef78fc9bb659c5046bf70a0"
+  integrity sha512-DT6C3vNbMQwBmC6IDscqJnNotTvSJ9kioup1LLeBfBLSnccCJBAH4gGy/Ts4M91UMNovhxHeAJcPUvtweb9FWg==
+  dependencies:
+    "@nrwl/devkit" "14.5.1"
+    "@nrwl/jest" "14.5.1"
+    "@nrwl/js" "14.5.1"
+    "@nrwl/linter" "14.5.1"
+    "@nrwl/workspace" "14.5.1"
+    chalk "4.1.0"
+    copy-webpack-plugin "^10.2.4"
+    dotenv "~10.0.0"
+    enhanced-resolve "^5.8.3"
+    fork-ts-checker-webpack-plugin "7.2.13"
+    fs-extra "^10.1.0"
+    glob "7.1.4"
+    license-webpack-plugin "^4.0.2"
+    rxjs "^6.5.4"
+    source-map-support "0.5.19"
+    terser-webpack-plugin "^5.3.3"
+    tree-kill "1.2.2"
+    ts-loader "^9.2.6"
+    ts-node "~10.8.0"
+    tsconfig-paths "^3.9.0"
+    tsconfig-paths-webpack-plugin "3.5.2"
+    tslib "^2.3.0"
+    webpack "^5.58.1"
+    webpack-merge "^5.8.0"
+    webpack-node-externals "^3.0.0"
 
 "@nrwl/nx-cloud@latest":
   version "14.2.0"
@@ -3520,7 +3560,7 @@
     "@types/qs" "*"
     "@types/range-parser" "*"
 
-"@types/express@*", "@types/express@^4.17.13":
+"@types/express@*", "@types/express@4.17.13", "@types/express@^4.17.13":
   version "4.17.13"
   resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.13.tgz#a76e2995728999bab51a33fabce1d705a3709034"
   integrity sha512-6bSZTPaTIACxn48l50SR+axgrqm6qXFIxrdAKaG6PaJk3+zuUr35hBlgT7vOmJcum+OEaIBLtHV/qloEAFITeA==
@@ -7426,7 +7466,7 @@ expect@^27.5.1:
     jest-matcher-utils "^27.5.1"
     jest-message-util "^27.5.1"
 
-express@^4.17.1, express@^4.17.3:
+express@^4.17.1, express@^4.17.3, express@^4.18.1:
   version "4.18.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.1.tgz#7797de8b9c72c857b9cd0e14a5eea80666267caf"
   integrity sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==
