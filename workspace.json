@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "-web-admin-api-test-endpoint": "libs/web-admin-api/test-endpoint",
     "shared-components": "libs/shared-components",
     "web-admin": "apps/web-admin",
     "web-admin-api": "apps/web-admin-api",
