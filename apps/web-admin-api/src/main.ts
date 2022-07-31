@@ -1,8 +1,11 @@
+import { addTestingRoutes } from '@clinica//web-admin-api/test-endpoint';
 import * as express from 'express';
 
 ;(async function() {
   const app = express();
   app.use(express.urlencoded({ extended: true }))
+
+  addTestingRoutes(app)
 
   app.get('/healthCheck', (_req, res) => {
     res.send({
