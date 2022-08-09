@@ -24,9 +24,15 @@ services:
       HASURA_GRAPHQL_ENABLE_CONSOLE: "false" # set to "false" to disable console
       ## enable debugging mode. It is recommended to disable this in production
       HASURA_GRAPHQL_DEV_MODE: "true"
+      API_URL: http://host.docker.internal:3333
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
       ## uncomment next line to set an admin secret
       HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+    volumes:
+      - ./migrations:/hasura-migrations
+      - ./metadata:/hasura-metadata
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
 volumes:
   db_data:
 
