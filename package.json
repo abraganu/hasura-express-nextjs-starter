@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "start:dev": "yarn nx run-many --target=serve  --projects=web-admin,web-admin-api"
   },
   "private": true,
   "dependencies": {
