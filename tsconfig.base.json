@@ -15,11 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@clinica//web-admin-api/test-endpoint": [
-        "libs/web-admin-api/test-endpoint/src/index.ts"
-      ],
-      "@clinica/shared-components": ["libs/shared-components/src/index.ts"],
-      "@clinica/web-admin-pages": ["libs/web-admin-pages/src/index.ts"]
+      "@clinica/admin-pages": ["libs/web/admin-pages/src/index.ts"],
+      "@clinica/api/admin/example": ["libs/api/admin/example/src/index.ts"],
+      "@clinica/shared-components": ["libs/web/shared-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

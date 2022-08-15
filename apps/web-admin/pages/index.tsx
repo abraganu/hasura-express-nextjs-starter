@@ -1,5 +1,5 @@
 import { SharedComponents } from '@clinica/shared-components';
-import { WebAdminPages } from '@clinica/web-admin-pages';
+import { WebAdminPages } from '@clinica/admin-pages';
 
 export function Index() {
   return (
