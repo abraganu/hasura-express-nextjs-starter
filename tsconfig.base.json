@@ -17,7 +17,8 @@
     "paths": {
       "@clinica/admin-pages": ["libs/web/admin-pages/src/index.ts"],
       "@clinica/api/admin/example": ["libs/api/admin/example/src/index.ts"],
-      "@clinica/shared-components": ["libs/web/shared-components/src/index.ts"]
+      "@clinica/shared-components": ["libs/web/shared-components/src/index.ts"],
+      "@clinica/web/utils": ["libs/web/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

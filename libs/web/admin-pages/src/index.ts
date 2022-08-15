@@ -1,2 +1,1 @@
-export * from './lib/web-admin-pages';
-export * from './lib/apolloClient';
+export * from './lib/ExamplePage/example-page'

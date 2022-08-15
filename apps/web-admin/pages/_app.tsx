@@ -1,5 +1,5 @@
 import { ApolloProvider } from '@apollo/client';
-import { useApollo } from '@clinica/admin-pages';
+import { useApollo } from '@clinica/web/utils';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
