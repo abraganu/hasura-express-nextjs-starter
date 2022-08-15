@@ -1,20 +1,10 @@
-import { gql, useQuery } from '@apollo/client';
 import { StyledExamplePages } from './example-page.styles';
-
-export const EXAMPLE_QUERY = gql`
-  query ExampleQuery {
-    example {
-      id
-      test_text
-    }
-  }
-`
+import { useExampleQuery } from './example.graphql';
 /* eslint-disable-next-line */
 export interface ExamplePageProps {}
 
 export function ExamplePage(props: ExamplePageProps) {
-  const { data } = useQuery(EXAMPLE_QUERY)
-
+  const { data } = useExampleQuery()
   return (
     <StyledExamplePages>
       <h1>Welcome to ExamplePage!</h1>

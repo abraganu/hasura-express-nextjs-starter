@@ -14,11 +14,16 @@ The complete application is compose by:
 - An express service for custom logic
 - A hasura application to build a graphql service. This works with docker-compose
 
-In order to run the hole application you need to have the 3 services mentioned above. You need to first run the services created with NX running 
+In order to run the whole application you need to have the 3 services mentioned above. You need to first run the services created with NX running 
 the next CLI command `yarn start:dev`.
 Next you need to run the hasura application with the next command `docker compose up -d`.
 Last, once your hasura service is running if you want to make changes on the database and create some custom logic using one of the many solution
 hasura provide you will need to open the console using the next command `yan nx hasura console`
+
+## Creating resolvers for frontend components
+The recommendation is to create all the components use by one page in the same lib where the page leaves. In this way we are going to know exactly which queries are performed by the current page and it will be more easy to find them.
+
+You need always export the `gql` template auto generated to be able to use it in a server side operation with nextjs
 ## Build
 
 Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.

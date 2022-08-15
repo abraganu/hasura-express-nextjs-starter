@@ -1,0 +1,44 @@
+schema:
+  - 'http://localhost:8080/v1/graphql':
+      headers:
+        x-hasura-admin-secret: myadminsecretkey
+documents:
+  - 'libs/**/*.gql'
+  - 'apps/**/*.gql'
+  - 'metadata/actions.graphql'
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+    - eslint --fix
+generates:
+  libs/generated/src/index.ts:
+    plugins:
+      - typescript
+    config:
+      scalars:
+        date: string
+        uuid: string
+        timestamp: string
+        timestamptz: string
+        interval: string
+        numeric: number
+  libs/:
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: '~@clinica/generated'
+      importAllFragmentsFrom: '~@clinica/generated'
+      extension: .graphql.ts
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      addDocBlocks: false
+      pureMagicComment: true
+      scalars:
+        date: string
+        uuid: string
+        timestamp: string
+        timestamptz: string
+        interval: string
+        numeric: number
+

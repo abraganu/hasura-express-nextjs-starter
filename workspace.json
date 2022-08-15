@@ -4,6 +4,7 @@
   "projects": {
     "api-admin": "apps/api-admin",
     "api-admin-example": "libs/api/admin/example",
+    "generated": "libs/generated",
     "web-admin": "apps/web-admin",
     "web-admin-e2e": "apps/web-admin-e2e",
     "web-admin-pages": "libs/web/admin-pages",

@@ -1,5 +1,5 @@
 import { SharedComponents } from '@clinica/shared-components';
-import { ExamplePage, EXAMPLE_QUERY } from '@clinica/admin-pages';
+import { ExampleDocument, ExamplePage } from '@clinica/admin-pages';
 import { addApolloState, initializeApollo } from '@clinica/web/utils';
 
 export function Index() {
@@ -13,7 +13,7 @@ export function Index() {
 
 export async function getServerSideProps() {
   const apolloClient = initializeApollo()
-  await apolloClient.query({ query: EXAMPLE_QUERY })
+  await apolloClient.query({ query: ExampleDocument })
 
   return addApolloState(apolloClient, {
     props: {},

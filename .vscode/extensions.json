@@ -3,6 +3,9 @@
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "capaj.graphql-codegen-vscode",
+    "GraphQL.vscode-graphql",
+    "GraphQL.vscode-graphql-syntax"
   ]
 }

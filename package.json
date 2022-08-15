@@ -6,7 +6,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "start:dev": "yarn nx run-many --target=serve  --projects=web-admin,api-admin"
+    "start:dev": "nx run-many --target=serve  --projects=web-admin,api-admin",
+    "generate": "graphql-codegen"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +32,11 @@
     "@babel/core": "7.12.13",
     "@babel/preset-typescript": "7.12.13",
     "@emotion/babel-plugin": "11.9.2",
+    "@graphql-codegen/cli": "^2.11.6",
+    "@graphql-codegen/near-operation-file-preset": "^2.4.1",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.3",
     "@nrwl/cli": "14.5.1",
     "@nrwl/cypress": "14.5.1",
     "@nrwl/eslint-plugin-nx": "14.5.1",
