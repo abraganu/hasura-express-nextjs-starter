@@ -1,1 +1,2 @@
 - "!include public_example.yaml"
+- "!include public_physician.yaml"

@@ -1,0 +1,3 @@
+table:
+  name: physician
+  schema: public
