@@ -1,14 +1,8 @@
-import { SharedComponents } from '@clinica/shared-components';
-import { ExampleDocument, ExamplePage } from '@clinica/admin-pages';
-import { addApolloState, initializeApollo } from '@clinica/web/utils';
+import { ExampleDocument, ExamplePage } from '@clinica/admin-pages'
+import { addApolloState, initializeApollo } from '@clinica/web/utils'
 
 export function Index() {
-  return (
-    <>
-      <ExamplePage />
-      <SharedComponents />
-    </>
-  );
+  return <ExamplePage />
 }
 
 export async function getServerSideProps() {
@@ -21,4 +15,4 @@ export async function getServerSideProps() {
 }
 
 
-export default Index;
+export default Index
