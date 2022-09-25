@@ -13,7 +13,7 @@
       },
       "configurations": {
         "development": {
-          "outputPath": "tmp/apps/web-admin"
+          "outputPath": "apps/web-admin"
         },
         "production": {}
       }
