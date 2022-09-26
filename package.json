@@ -6,7 +6,7 @@
     "node": ">=16"
   },
   "scripts": {
-    "start": "nx serve",
+    "dev:web": "nx serve",
     "build": "nx build",
     "test": "nx test",
     "start:hasura-engine": "docker-compose up -d",
@@ -15,7 +15,7 @@
     "start:web-admin": "nx serve web-admin",
     "watch": "wait-on http-get://127.0.0.1:8080/v1/version/ && yarn npm-watch",
     "codegen:gql": "graphql-codegen --config codegen.yml",
-    "dev": "npm-run-all start:hasura-engine -p -r start:hasura-console watch start:api-admin"
+    "dev:api": "npm-run-all start:hasura-engine -p -r start:hasura-console watch start:api-admin"
   },
   "private": true,
   "dependencies": {
