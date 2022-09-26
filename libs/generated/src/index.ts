@@ -53,6 +53,14 @@ export type String_Comparison_Exp = {
   _similar?: InputMaybe<Scalars['String']>;
 };
 
+/** ordering argument of a cursor */
+export enum Cursor_Ordering {
+  /** ascending ordering of the cursor */
+  Asc = 'ASC',
+  /** descending ordering of the cursor */
+  Desc = 'DESC',
+}
+
 /** columns and relationships of "example" */
 export type Example = {
   __typename?: 'example';
@@ -153,6 +161,20 @@ export enum Example_Select_Column {
 
 /** input type for updating data in table "example" */
 export type Example_Set_Input = {
+  id?: InputMaybe<Scalars['uuid']>;
+  test_text?: InputMaybe<Scalars['String']>;
+};
+
+/** Streaming cursor of the table "example" */
+export type Example_Stream_Cursor_Input = {
+  /** Stream column input with initial value */
+  initial_value: Example_Stream_Cursor_Value_Input;
+  /** cursor ordering */
+  ordering?: InputMaybe<Cursor_Ordering>;
+};
+
+/** Initial value of the column from where the streaming should start */
+export type Example_Stream_Cursor_Value_Input = {
   id?: InputMaybe<Scalars['uuid']>;
   test_text?: InputMaybe<Scalars['String']>;
 };
@@ -429,6 +451,23 @@ export type Physician_Set_Input = {
   updated_at?: InputMaybe<Scalars['timestamptz']>;
 };
 
+/** Streaming cursor of the table "physician" */
+export type Physician_Stream_Cursor_Input = {
+  /** Stream column input with initial value */
+  initial_value: Physician_Stream_Cursor_Value_Input;
+  /** cursor ordering */
+  ordering?: InputMaybe<Cursor_Ordering>;
+};
+
+/** Initial value of the column from where the streaming should start */
+export type Physician_Stream_Cursor_Value_Input = {
+  created_at?: InputMaybe<Scalars['timestamptz']>;
+  first_name?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['uuid']>;
+  last_name?: InputMaybe<Scalars['String']>;
+  updated_at?: InputMaybe<Scalars['timestamptz']>;
+};
+
 /** update columns of table "physician" */
 export enum Physician_Update_Column {
   /** column name */
@@ -513,12 +552,16 @@ export type Subscription_Root = {
   example_aggregate: Example_Aggregate;
   /** fetch data from the table: "example" using primary key columns */
   example_by_pk?: Maybe<Example>;
+  /** fetch data from the table in a streaming manner : "example" */
+  example_stream: Array<Example>;
   /** fetch data from the table: "physician" */
   physician: Array<Physician>;
   /** fetch aggregated fields from the table: "physician" */
   physician_aggregate: Physician_Aggregate;
   /** fetch data from the table: "physician" using primary key columns */
   physician_by_pk?: Maybe<Physician>;
+  /** fetch data from the table in a streaming manner : "physician" */
+  physician_stream: Array<Physician>;
 };
 
 export type Subscription_RootExampleArgs = {
@@ -541,6 +584,12 @@ export type Subscription_RootExample_By_PkArgs = {
   id: Scalars['uuid'];
 };
 
+export type Subscription_RootExample_StreamArgs = {
+  batch_size: Scalars['Int'];
+  cursor: Array<InputMaybe<Example_Stream_Cursor_Input>>;
+  where?: InputMaybe<Example_Bool_Exp>;
+};
+
 export type Subscription_RootPhysicianArgs = {
   distinct_on?: InputMaybe<Array<Physician_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -559,6 +608,12 @@ export type Subscription_RootPhysician_AggregateArgs = {
 
 export type Subscription_RootPhysician_By_PkArgs = {
   id: Scalars['uuid'];
+};
+
+export type Subscription_RootPhysician_StreamArgs = {
+  batch_size: Scalars['Int'];
+  cursor: Array<InputMaybe<Physician_Stream_Cursor_Input>>;
+  where?: InputMaybe<Physician_Bool_Exp>;
 };
 
 /** Boolean expression to compare columns of type "timestamptz". All fields are combined with logical 'AND'. */
