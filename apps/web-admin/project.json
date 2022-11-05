@@ -44,7 +44,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/web-admin"],
+      "outputs": ["{workspaceRoot}/coverage/apps/web-admin"],
       "options": {
         "jestConfig": "apps/web-admin/jest.config.ts",
         "passWithNoTests": true
