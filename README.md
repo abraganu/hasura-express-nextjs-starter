@@ -20,12 +20,7 @@ TODO:
 - Authentication hasura-auth?, Cognito?, Auth0?
 - Deployment process
 ## Running the app
-The complete application is compose by:
-- A nextjs application in the frontend
-- An express service for custom logic
-- A hasura application to build a graphql service. This works with docker-compose
-
-In order to run the whole application you need to have the 3 services mentioned above.
+In order to run the whole application you need to have the 3 services mentioned above running.
 
 - You need to first run the api and the hasura engine that will expose a grapqhl service. Also this will run a graphql code generator and the hasura console (use to manage the database from a UI)
 ```bash
