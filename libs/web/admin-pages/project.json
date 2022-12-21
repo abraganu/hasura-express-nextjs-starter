@@ -50,5 +50,6 @@
         }
       }
     }
-  }
+  },
+  "name": "web-admin-pages"
 }

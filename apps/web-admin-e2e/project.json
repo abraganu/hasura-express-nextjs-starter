@@ -25,5 +25,6 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["web-admin"]
+  "implicitDependencies": ["web-admin"],
+  "name": "web-admin-e2e"
 }
