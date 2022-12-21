@@ -8,6 +8,7 @@
   "scripts": {
     "build": "nx build",
     "codegen:gql": "graphql-codegen --config codegen.yml",
+    "codegen:prisma": "prisma db pull --force && prisma generate",
     "dev:web": "nx serve",
     "dev:api": "npm-run-all start:hasura-engine -p -r start:hasura-console watch start:api-admin",
     "start:hasura-engine": "docker-compose up -d",
@@ -27,6 +28,7 @@
     "@mantine/hooks": "^5.9.5",
     "@mantine/next": "^5.9.5",
     "@nrwl/next": "15.3.3",
+    "@prisma/client": "^4.8.0",
     "core-js": "^3.6.5",
     "cross-fetch": "^3.1.5",
     "deepmerge": "^4.2.2",
@@ -95,6 +97,7 @@
     "npm-watch": "^0.11.0",
     "nx": "15.3.3",
     "prettier": "^2.6.2",
+    "prisma": "^4.8.0",
     "react-refresh": "^0.10.0",
     "react-test-renderer": "18.2.0",
     "style-loader": "^3.3.0",
@@ -109,6 +112,14 @@
     "webpack-merge": "^5.8.0"
   },
   "watch": {
+    "codegen:prisma": {
+      "patterns": [
+        "migrations",
+        "metadata"
+      ],
+      "extensions": "sql,yml,yaml",
+      "quiet": false
+    },
     "codegen:gql": {
       "patterns": [
         "migrations",
