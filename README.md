@@ -1,49 +1,44 @@
 
 
-# Clinica
+# Starter Project
 
 This project was generated using [Nx](https://nx.dev).
+Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+## Technologies, libraries and frameworks use in the project
+- NX for managing the project in a monorepo style and shared libraries
+- Next/Typescript for the frontend
+- Hasura to help build a graphql service and managing the db and real time subscriptions
+- Node/Express/Typescript service to handle custom logic
+- Cypress for e2e testing
+- Storybook for manual testing
+- Postgresql
 
-🔎 **Smart, Fast and Extensible Build System**
-
-## Running the complete application to develop
+TODO:
+- Add prisma to query the db in the Node/Express service
+- Authentication hasura-auth?, Cognito?, Auth0?
+- Deployment process
+## Running the app
 The complete application is compose by:
 - A nextjs application in the frontend
 - An express service for custom logic
 - A hasura application to build a graphql service. This works with docker-compose
 
-In order to run the whole application you need to have the 3 services mentioned above. You need to first run the services created with NX running 
-the next CLI command `yarn start:dev`.
-Next you need to run the hasura application with the next command `docker compose up -d`.
-Last, once your hasura service is running if you want to make changes on the database and create some custom logic using one of the many solution
-hasura provide you will need to open the console using the next command `yan nx hasura console`
+In order to run the whole application you need to have the 3 services mentioned above.
 
-## Creating resolvers for frontend components
-The recommendation is to create all the components use by one page in the same lib where the page leaves. In this way we are going to know exactly which queries are performed by the current page and it will be more easy to find them.
+- You need to first run the api and the hasura engine that will expose a grapqhl service. Also this will run a graphql code generator and the hasura console (use to manage the database from a UI)
+```bash
+yarn dev:api
+```
+- To run the frontend you need to open a new terminal window/tab and run the next command
+```bash
+yarn dev:web
+```
 
-You need always export the `gql` template auto generated to be able to use it in a server side operation with nextjs
 ## Build
 
 Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `nx e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+## TODO
+- Add information on where to add each Page/Module/Endpoint/Component in the project and how to use the NX generator to achieve this.
+- Add commands to running (right now this could be accomplish using nx cli commands)
