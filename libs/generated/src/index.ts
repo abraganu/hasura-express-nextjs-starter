@@ -552,7 +552,7 @@ export type Subscription_Root = {
   example_aggregate: Example_Aggregate;
   /** fetch data from the table: "example" using primary key columns */
   example_by_pk?: Maybe<Example>;
-  /** fetch data from the table in a streaming manner : "example" */
+  /** fetch data from the table in a streaming manner: "example" */
   example_stream: Array<Example>;
   /** fetch data from the table: "physician" */
   physician: Array<Physician>;
@@ -560,7 +560,7 @@ export type Subscription_Root = {
   physician_aggregate: Physician_Aggregate;
   /** fetch data from the table: "physician" using primary key columns */
   physician_by_pk?: Maybe<Physician>;
-  /** fetch data from the table in a streaming manner : "physician" */
+  /** fetch data from the table in a streaming manner: "physician" */
   physician_stream: Array<Physician>;
 };
 

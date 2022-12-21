@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: clinica
   graphql-engine:
-    image: hasura/graphql-engine:v2.12.0.cli-migrations-v3
+    image: hasura/graphql-engine:v2.15.2.cli-migrations-v3
     ports:
     - "8080:8080"
     depends_on:
