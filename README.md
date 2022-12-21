@@ -42,4 +42,4 @@ Run `nx build my-app` to build the project. The build artifacts will be stored i
 
 ## TODO
 - Add information on where to add each Page/Module/Endpoint/Component in the project and how to use the NX generator to achieve this.
-- Add commands to running (right now this could be accomplish using nx cli commands)
+- Add commands to run tests. e2e, storybook, react tests (right now this could be accomplish using nx cli commands)
