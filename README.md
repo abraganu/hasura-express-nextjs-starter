@@ -10,13 +10,13 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 - Next/Typescript for the frontend. [Next Documentation](https://nextjs.org/docs/getting-started)
 - Hasura to help build a graphql service and managing the db and real time subscriptions. [Hasura Documentation](https://hasura.io/docs/latest/index/)
 - Node/Express/Typescript service to handle custom logic.
+- Prisma to query the db in the Node/Express service. [Prisma Documentation](https://www.prisma.io/docs)
 - Apollo Client. [Apollo Client Documentation](https://www.apollographql.com/docs/react/)
 - Cypress for e2e testing. [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress)
 - Storybook for manual testing. [Storybook](https://storybook.js.org/docs/react/get-started/introduction)
 - Postgresql.
 
 TODO:
-- Add prisma to query the db in the Node/Express service. [Prisma Documentation](https://www.prisma.io/docs)
 - Authentication hasura-auth?, Cognito?, Auth0?
 - Deployment process
 ## Running the app
