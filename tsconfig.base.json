@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@clinica/admin-pages": ["libs/web/admin-pages/src/index.ts"],
-      "@clinica/api/admin/example": ["libs/api/admin/example/src/index.ts"],
+      "@clinica/api": ["libs/api/src/index.ts"],
       "@clinica/generated": ["libs/generated/src/index.ts"],
       "@clinica/shared-components": ["libs/web/shared-components/src/index.ts"],
       "@clinica/web/utils": ["libs/web/utils/src/index.ts"]
