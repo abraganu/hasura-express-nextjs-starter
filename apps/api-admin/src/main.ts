@@ -1,4 +1,4 @@
-import { addExampleRoutes } from '@clinica/api/admin/example';
+import { addAuthRoutes } from '@clinica/api/auth';
 import * as express from 'express';
 
 (async function () {
@@ -6,7 +6,7 @@ import * as express from 'express';
   app.use(express.urlencoded({ extended: true }));
 
   // add routes
-  addExampleRoutes(app);
+  addAuthRoutes(app);
 
   app.get('/healthCheck', (_req, res) => {
     res.send({

@@ -20,6 +20,11 @@ export type Scalars = {
   uuid: string;
 };
 
+export type LoginOutput = {
+  __typename?: 'LoginOutput';
+  accessToken: Scalars['String'];
+};
+
 /** Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'. */
 export type String_Comparison_Exp = {
   _eq?: InputMaybe<Scalars['String']>;
@@ -212,6 +217,8 @@ export type Mutation_Root = {
   insert_physician?: Maybe<Physician_Mutation_Response>;
   /** insert a single row into the table: "physician" */
   insert_physician_one?: Maybe<Physician>;
+  /** action to handle login */
+  login?: Maybe<LoginOutput>;
   /** update data of the table: "example" */
   update_example?: Maybe<Example_Mutation_Response>;
   /** update single row of the table: "example" */
@@ -268,6 +275,12 @@ export type Mutation_RootInsert_PhysicianArgs = {
 export type Mutation_RootInsert_Physician_OneArgs = {
   object: Physician_Insert_Input;
   on_conflict?: InputMaybe<Physician_On_Conflict>;
+};
+
+/** mutation root */
+export type Mutation_RootLoginArgs = {
+  password: Scalars['String'];
+  username: Scalars['String'];
 };
 
 /** mutation root */
